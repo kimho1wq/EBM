@@ -11,7 +11,7 @@ def get_args():
     system_args = {
         # expeirment info
         'project'       : 'CM',
-        'name'          : '8.W2V2_linear_EOC_BPL',
+        'name'          : 'EBM',
         'tags'          : ['LA'],
         'description'   : '',
         # log
@@ -57,7 +57,7 @@ def get_args():
         'r_real'            : 0.9,
         'r_fake'            : 0.2,
         'alpha'             : 20.0,
-        'alpha_cl'          : 5.0,
+        'alpha_cl'          : 30.0,
         'loss_weight'       : [1,1,1,1,1],
         'use_class_weight'  : True,
 

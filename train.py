@@ -44,8 +44,6 @@ class ModelTrainer:
         for epoch in range(1, self.args['epoch'] + 1):
             self.train(epoch)
             self._synchronize()
-            self.evaluation(epoch)
-            self._synchronize()
             if 15 <= epoch and epoch % 5 == 0:
                 self.evaluation(epoch)
                 self._synchronize()
@@ -90,8 +88,6 @@ class ModelTrainer:
             small = 'spoof'
         with tqdm(total=len(big_loader), ncols=90) as pbar:
             for i, (x_a, x_a_short, labels_a) in enumerate(big_loader):
-                if i > 20:
-                    break
                 try:
                     x_b, x_b_short, labels_b = next(small_loader_iter)
                 except:
